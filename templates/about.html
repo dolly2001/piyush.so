@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %} About | Piyush Solanki {% endblock %}
+
+{% block content %}
+
+
+<section class="spec-section">
+
+    <p>Hey there, I am Piyush — a full-stack engineer who speaks fluent backend, dreams in databases, and breaks only bugs (not production). I’m a Computer Science enthusiast on a mission to build cool stuff while learning like my coffee depends on it.<p><br><br>
+
+    <h2 class="spec-heading">I, Know</h2>
+    <div class="spec-table">
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>Frontend/Frameworks</th>
+                <th>Backend/Frameworks</th>
+                <th>Database</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>HTML</td>
+                <td>Flask</td>
+                <td>SQLite</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>CSS</td>
+                <td>Django</td>
+                <td>PostgreSQL</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td>React</td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td></td>
+                <td>Framer</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div><br><br><br>
+
+    <h2 class="spec-heading">EDUCATION</h2>
+
+    <div class="spec-layout">
+        <!-- Left Side: Image -->
+        <div class="spec-image">
+            <img src="{{ url_for('static', filename='images/edu_img.png') }}" alt="Book Image">
+        </div>
+
+        <!-- Right Side: Table -->
+        <div class="spec-table">
+            <table>
+                <tr>
+                    <th>Degree/Schooling</th>
+                    <th>CGPA/Percentage</th>
+                </tr>
+                <tr>
+                    <td>B.Tech</td>
+                    <td>7.77</td>
+                </tr>
+                <tr>
+                    <td>High School</td>
+                    <td>67%</td>
+                </tr>
+                <tr>
+                    <td>Higher Secondary School</td>
+                    <td>68%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

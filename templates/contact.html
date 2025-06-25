@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Piyush Solanki{% endblock %}
+
+{% block content %}
+<section class="contact-container">
+  <h2>Let's Connect</h2>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="form-messages">
+        {% for category, msg in messages %}
+          <p class="{{ category }}">{{ msg }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  {% if submitted %}
+    <p class="success-msg">Thanks {{ submitted.name }}, I'll get back to you soon!</p>
+  {% endif %}
+</section>
+{% endblock %}

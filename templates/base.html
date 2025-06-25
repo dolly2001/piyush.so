@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Piyush Solanki{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="title-name">Piyush Solanki</h1>
+        <hr>
+        <nav>
+            <a href="/" class="nav-link">Home</a>
+            <a href="{{url_for('about')}}" class="nav-link">About</a>
+            <a href="{{url_for('projects')}}" class="nav-link">Projects</a>
+            <a href="{{url_for('contact')}}" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Piyush Solanki</p>
+        <nav class="footer-links">
+            <a href="https://www.linkedin.com/in/dev-piyushsolanki/" class="nav-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/dolly2001" class="nav-link" target="_blank">GitHub</a>
+            <a>piyushsolanki@gmail.com</a>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>

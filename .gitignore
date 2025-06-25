@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+instance/
+.env
+venv/
+*.db
+*.sqlite3
+*.pkl
+contacts.csv
+venv/
+static/images
